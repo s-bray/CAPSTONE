@@ -31,7 +31,7 @@ def predict_pothole(currentFrame):
 # main function
 if __name__ == '__main__':
 
-    loadedModel = load_model('/home/pi/project/pothole-detection-system-using-convolution-neural-networks/Real-time Files/full_model.h5')
+    loadedModel = load_model('full_model.h5')
 
     camera = cv2.VideoCapture(0)
 

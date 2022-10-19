@@ -59,8 +59,7 @@ if __name__ == '__main__':
         
         if(show_pred):
             cv2.putText(clone , str(pothole) , (30,30) , cv2.FONT_HERSHEY_DUPLEX , 1 , (0,255,0) , 1)
-        if(prob*100 > 99.9):
-            print("Pothole Detected")
+        print(prob)
         cv2.imshow("GrayClone",grayClone)
         cv2.imshow("Video Feed",clone)
 
