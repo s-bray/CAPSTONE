@@ -1,12 +1,8 @@
-from picamera import PiCamera
 import curses
 from gpiozero import Robot
 
 robot = Robot(left = (26, 20), right = (19,16))
-camera = PiCamera()
-camera.resolution = (640, 480)
-camera.rotation = 180
-camera.start_preview()
+
 
 actions = {
     curses.KEY_UP:    robot.forward,
