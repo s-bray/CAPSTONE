@@ -22,10 +22,10 @@ def predict_pothole(currentFrame):
     currentFrame = cv2.resize(currentFrame,(size,size))
     currentFrame = currentFrame.reshape(1,size,size,1).astype('float')
     currentFrame = currentFrame/255
-    prob = loadedModel.predict_proba(currentFrame)
+    prob = loadedModel.predict(currentFrame)
     max_prob = max(prob[0])
     if(max_prob>.90):
-        return loadedModel.predict_classes(currentFrame) , max_prob
+        return loadedModel.predict(currentFrame) , max_prob
     return "none",0
 
 # main function

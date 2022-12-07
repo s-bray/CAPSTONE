@@ -3,9 +3,10 @@ import os
 import six.moves.urllib as urllib
 import sys
 import tarfile
+import cv2
 import tensorflow as tf
 import zipfile
-import cv2
+
 
 from collections import defaultdict
 from io import StringIO

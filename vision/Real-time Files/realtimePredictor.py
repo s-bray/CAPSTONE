@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     loadedModel = load_model('full_model.h5')
 
-    camera = cv2.VideoCapture(0)
+    camera = cv2.VideoCapture('/dev/video0', cv2.CAP_V4L)
 
     show_pred = False
     # loop until interrupted
